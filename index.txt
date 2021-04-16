@@ -1,0 +1,161 @@
+************************************************************************************
+                      VERSÃO GIT
+git --version
+************************************************************************************
+
+
+git init
+git ls-files -> show files are control by Git
+git status -> show status of each file.
+git add nomeFile.
+git config user.name.
+git config user.email.
+git commit -a -m 'mensagem'->pula a opção de add file
+
+************************************************************************************
+git log
+git whatchanged
+git whatchanged -p
+
+git remote -> show those online repositories
+git remote add {nomeRepositorioGitHub-> default we call it origin} {urlGitHub}
+
+git push {origin} {branchName} -> Atualiza o repositório online.
+
+git clone
+
+git show {num_commit} -> Apresenta as alterações.
+************************************************************************************
+
+$ git tag -a <name> -m <message>
+git tag ->versões do projeto.
+git checkout <versão> ->muda versão
+git diff <v1> <v2> ->verifica a diferença entre 
+as versões
+
+************************************************************************************
+
+git checkout -b {nomeBranch} -> Cria e muda para a branch
+git checkout -b {nomeBranch} origin/{nomeBranchRemota} -> Criar uma branch local a partir da
+branch remota.
+
+git checkout {nomeArquivo} -> Volta para o estado antes de alteração do arquivo.
+
+
+git branch {nomeBranch} -> Lista as branches locais.
+git branch -r -> Apresenta as branchs remotas.
+git branch -l -> Apresenta as branchs locais.
+git branch -a -> impressão de todas as branch.
+
+git push origin --delete {nomeBranch} -> Remove a branch online.
+git push -d origin {nomeBranch} -> remove uma branch online.
+git branch -D {nomeBranch} -> Remove local.
+git branch -m {novoNomeBranch} -> Renomear uma Branch.
+
+git push -u {repositórioOnline} {repositórioLocal}
+-> -u faz um setting informando que o repositório local é o mesmo do online
+caso seja necessário fazer um git pull.
+
+git branch -t design origin/design -> Conecta uma branch local com uma remota
+
+*************************************************************************************************
+                    CREATE THROUGHT REMOTE BRANCH	
+git checkout -b develop origin/develop -> Cria e conecta branch local com a remota.
+
+x'
+git merge {nomeBranch} -> Executar na Branch Master.
+
+git pull origin {nomeBranchLocal} -> Atualiza Branch Local
+
+************************************************************************************************
+
+Processo para atualizar uma Branch.
+git pull -> Na Master.
+
+git rebase {branch_origem} {branch_destino} -> Usar com parcimonia. Pode "sumir"
+com commits da branch master.
+
+************************************************************************************************************************************************
+                                  GIT RESET
+
+git reset -> Remove todos os arquivos da Stage Area(Before Commit), retorna para o status
+modified.
+
+git reset {nomeArquivo} -> Remove o arquivo da Stage Area e retorna para o status
+modified.
+
+git reset --soft {numCommit} -> HEAD será direcionado para o {numCommit} informado. As mudanças posteriores ao {numCommit} vão para Stage Area.
+
+git reset --hard {numCommit} -> O HEAD será direcionado para o {numCommit} informado. As mudanças posteriores ao {numCommit} serão excluídas.	
+
+**************************************************************************************************************************************************
+                                 GIT STASH
+git stash-> As alterações são desfeitas e armazanadas em memória.
+
+git stash SAVE-> Permite nomear as alterações.
+
+git stash LIST-> Listagem de alterações.
+
+git stash SHOW {numeroStash}-> Apresenta detalhes sobre o item no topo da lista, caso o numero de commit seja omitido.
+
+git stash POP {numeroStash}-> Aplica a última alteração(Criada) caso um numero de commite seja omitido. Remove a alteração do topo da lista. 
+
+git stash APPLY {numeroStash}-> Aplica a última alteração(Criada) caso o numero de commit seja omitido. Mantem a lista de alterações.
+
+git stash DROP {numeroStash}-> Remove o item do topo da lista, caso o numero de commit seja omitido.
+
+git stash CLEAR-> Remove todos os itens do stash list.
+
+***************************************************************************************************************************************************
+                                 GIT BISECT
+git BISECT -> Apresenta a lista de opções do comando.
+
+git bisect START -> Acessa as funções do bisect.
+
+git bisect BAD Informa que o commit não é bom.
+
+git bisect good {numCommit} -> Informa que o commit é bom.
+
+git biset revert -> Depois que achar o commit bom, usar git revert, ele manter o header no commit tipo good.
+
+git revert {numCommit} -> Reverte para o commit desejado.
+***************************************************************************************************************************************************
+                                 ALIAS
+vim ~/.gitconfig -> Criar um [alias]
+st = status -> exemplo de alias para git status
+
+ck = checkout -> alias para git checkout
+
+
+************************************************************************************
+                          GIT LOG
+
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+
+git log -p -> Apresenta o que foi alterado.
+
+git log --stat -> Apresenta os arquivos alterados.
+
+git log --graph -> Linha do tempo das alterações.
+git log --graph --online
+
+************************************************************************************
+                        CHERRY-PICK-> trás commit de uma branch.
+
+git cherry-pick {numCommit}
+
+git cherry-pick {numCommit_1} {numCommit_1} => Aplica multiplos commits
+
+git cherry-pick {numCommit} -n => Aplica as alterações, mas mantem na unstage area
+
+git cherry-pick {numCommit_begin}..{numCommit_end}
+
+
+
+
+
+
+
+
