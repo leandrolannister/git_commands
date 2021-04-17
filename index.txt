@@ -2,11 +2,11 @@
                       VERSÃO GIT
 git --version
 ************************************************************************************
+                     COMANDOS INICIAIS
+git init   -> Iniciar um diretório dentro do controle GIT
 
+git status -> Mostra os arquivos que estão na untracked area
 
-git init
-git ls-files -> show files are control by Git
-git status -> show status of each file.
 git add nomeFile.
 git config user.name.
 git config user.email.
