@@ -1,7 +1,7 @@
-*************************************************************************************
+***************************************************************************************
                       VERSÃO GIT
 git --version
-*************************************************************************************
+***************************************************************************************
                      COMANDOS INICIAIS
 git init   -> Iniciar um diretório dentro do controle GIT.
 
@@ -15,9 +15,25 @@ git commit -m {mensagem_commit} -> Valida as alterações.
 
 git commit -a -m 'mensagem'-> pula a opção de add file **ATALHO**
 
-git config user.name. 
-git config user.email.
+***************************************************************************************
+                     CONFIG USERS
+git config --local user.name -> Grava nome do autor no commit. --local -> Para o projeto atual. 
+							       --global-> Todos os projetos.
+git config user -> Consulta usuario.
+ 
+git config --local user.email -> Grava email.
+************************************************************************************
+                          GIT LOG
+git log --oneline -> Resumo dos commits em uma linha.
 
+git log -p -> Apresenta o que foi alterado.
+
+git log --pretty=oneline
+git log --pretty=short
+git log --pretty=full
+git log --stat -> Apresenta os arquivos alterados.
+git log --graph -> Linha do tempo das alterações.
+git log --graph --online
 
 ************************************************************************************
 git log
@@ -133,20 +149,6 @@ st = status -> exemplo de alias para git status
 
 ck = checkout -> alias para git checkout
 
-
-************************************************************************************
-                          GIT LOG
-
-git log --pretty=oneline
-git log --pretty=short
-git log --pretty=full
-
-git log -p -> Apresenta o que foi alterado.
-
-git log --stat -> Apresenta os arquivos alterados.
-
-git log --graph -> Linha do tempo das alterações.
-git log --graph --online
 
 ************************************************************************************
                         CHERRY-PICK-> trás commit de uma branch.
