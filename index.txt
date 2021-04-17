@@ -1,16 +1,23 @@
 *************************************************************************************
                       VERSÃO GIT
 git --version
-************************************************************************************
+*************************************************************************************
                      COMANDOS INICIAIS
-git init   -> Iniciar um diretório dentro do controle GIT
+git init   -> Iniciar um diretório dentro do controle GIT.
 
-git status -> Mostra os arquivos que estão na untracked area
+git status -> Mostra os arquivos que estão na untracked area.
 
-git add nomeFile.
+git add {nomeArquivo} -> Envia o arquivo para unstage area.
+
+git add . ou -A -> Enviar todos os arquivos da untracked area para unstage area.
+
+git commit -m {mensagem_commit} -> Valida as alterações.
+
+git commit -a -m 'mensagem'-> pula a opção de add file **ATALHO**
+
 git config user.name.
 git config user.email.
-git commit -a -m 'mensagem'->pula a opção de add file
+
 
 ************************************************************************************
 git log
