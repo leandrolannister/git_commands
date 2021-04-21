@@ -38,7 +38,7 @@ git show {num_commit} -> Apresenta as alterações.
 git remote -> show those online repositories.
 ************************************************************************************
                         GITIGNORE
-
+.gitignore -> arquivos e pastas apontados aqui serão ignorados pelo git.
 
 
 ************************************************************************************
