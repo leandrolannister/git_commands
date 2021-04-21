@@ -2,7 +2,7 @@
                       VERSÃO GIT
 git --version
 ***************************************************************************************
-                     COMANDOS INICIAIS
+                      COMANDOS INICIAIS
 git init   -> Iniciar um diretório dentro do controle GIT.
 
 git status -> Mostra os arquivos que estão na untracked ou unstage area.
@@ -16,38 +16,31 @@ git commit -m {mensagem_commit} -> Valida as alterações.
 git commit -a -m 'mensagem'-> pula a opção de add file **ATALHO**
 
 ***************************************************************************************
-                     CONFIG USERS
+                      CONFIG USERS
 git config --local user.name -> Grava nome do autor no commit. --local -> Para o projeto atual. 
 							       --global-> Todos os projetos.
 git config user -> Consulta usuario.
  
 git config --local user.email -> Grava email.
 ************************************************************************************
-                          GIT LOG
+                       GIT LOG
 git log --oneline -> Resumo dos commits em uma linha.
-
 git log -p -> Apresenta o que foi alterado.
-
 git log --pretty=oneline
 git log --pretty=short
 git log --pretty=full
-git log --stat -> Apresenta os arquivos alterados.
+git log --stat  -> Apresenta os arquivos alterados.
 git log --graph -> Linha do tempo das alterações.
 git log --graph --online
-
-************************************************************************************
-git log
-git whatchanged
-git whatchanged -p
-
-git remote -> show those online repositories
-git remote add {nomeRepositorioGitHub-> default we call it origin} {urlGitHub}
-
-git push {origin} {branchName} -> Atualiza o repositório online.
-
-git clone
-
+git whatchanged -> Apresenta os arquivos alterados.
+git whatchanged -p => Apresenta os arquivos alterados e o que foi alterado.
 git show {num_commit} -> Apresenta as alterações.
+git remote -> show those online repositories.
+************************************************************************************
+                        GITIGNORE
+
+
+
 ************************************************************************************
 
 $ git tag -a <name> -m <message>
@@ -84,8 +77,9 @@ git branch -t design origin/design -> Conecta uma branch local com uma remota
 *************************************************************************************************
                     CREATE THROUGHT REMOTE BRANCH	
 git checkout -b develop origin/develop -> Cria e conecta branch local com a remota.
+*************************************************************************************************
 
-x'
+
 git merge {nomeBranch} -> Executar na Branch Master.
 
 git pull origin {nomeBranchLocal} -> Atualiza Branch Local
