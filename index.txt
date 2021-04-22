@@ -40,14 +40,10 @@ git remote -> show those online repositories.
                         GITIGNORE
 .gitignore -> arquivos e pastas apontados aqui serão ignorados pelo git.
 
-
 ************************************************************************************
+                        NEXT
+              
 
-$ git tag -a <name> -m <message>
-git tag ->versões do projeto.
-git checkout <versão> ->muda versão
-git diff <v1> <v2> ->verifica a diferença entre 
-as versões
 
 ************************************************************************************
 
