@@ -42,8 +42,7 @@ git remote -> show those online repositories.
 
 ************************************************************************************
                         BRANCH
-git branch {nomeDaBranch} -> Cria uma nova branch.
-              
+git branch {nomeDaBranch} -> Cria uma nova branch.              
 
 
 ************************************************************************************
