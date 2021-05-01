@@ -78,6 +78,9 @@ git checkout -b {nomeBranch} origin/{nomeBranchRemota} -> Criar uma branch local
 
 git checkout {nomeArquivo} -> Volta para o estado antes de alteração do arquivo.
 
+git checkout {numCommit} -> HEAD será apontado para o commit. E nenhuma alteração será considerada.
+-> Se desejar registrar os commit, uma branch deve ser criada a partir desse ponto.
+
 ************************************************************************************************************************************************
                      GIT RESET
 
@@ -136,11 +139,3 @@ git cherry-pick {numCommit_1} {numCommit_1} => Aplica multiplos commits
 git cherry-pick {numCommit} -n => Aplica as alterações, mas mantem na unstage area
 
 git cherry-pick {numCommit_begin}..{numCommit_end}
-
-
-
-
-
-
-
-
