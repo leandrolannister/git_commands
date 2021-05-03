@@ -1,7 +1,7 @@
-	***************************************************************************************
+*************************************************************************************************
                       VERSÃO GIT
 git --version
-***********************************************************************************************
+*************************************************************************************************
                       COMANDOS INICIAIS
 git init   -> Iniciar um diretório dentro do controle GIT.
 
@@ -36,11 +36,11 @@ git whatchanged -> Apresenta os arquivos alterados.
 git whatchanged -p => Apresenta os arquivos alterados e o que foi alterado.
 git show {num_commit} -> Apresenta as alterações.
 git remote -> show those online repositories.
-*******************************************************************************************************************
+**************************************************************************************************
                         GITIGNORE
 .gitignore -> arquivos e pastas apontados aqui serão ignorados pelo git.
 
-*******************************************************************************************************************
+**************************************************************************************************
                         BRANCH
 git branch {nomeDaBranch} -> Cria uma nova branch.              
 
@@ -81,7 +81,13 @@ git checkout {nomeArquivo} -> Volta para o estado antes de alteração do arquiv
 git checkout {numCommit} -> HEAD será apontado para o commit. E nenhuma alteração será considerada.
 -> Se desejar registrar os commit, uma branch deve ser criada a partir desse ponto.
 
-************************************************************************************************************************************************
+*********************************************************************************************************************
+                      DIFF
+git diff {old_commit}..{new_commit} -> Apresenta as alterações com base no intervalo do commit
+
+git diff -> apresenta o que foi alterado, antes de executar git add
+
+***********************************************************************************************************************
                      GIT RESET
 
 git revert {numCommit} -> Cria um novo commit, desfazendo a alteração anteior.
