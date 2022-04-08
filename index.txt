@@ -1,3 +1,4 @@
+
 *************************************************************************************************
                       VERSÃO GIT
 git --version
@@ -90,11 +91,15 @@ git diff -> apresenta o que foi alterado, antes de executar git add
 ***********************************************************************************************************************
                      GIT RESET
 
+git restore --staged {nomeArquivo} -> Enviar arquivo para stado de modified.
+
 git revert {numCommit} -> Cria um novo commit, desfazendo a alteração anteior.
 
 git reset --soft {numCommit} -> HEAD será direcionado para o {numCommit} informado. As mudanças posteriores ao {numCommit} vão para Stage Area.
 
 git reset --hard {numCommit} -> O HEAD será direcionado para o {numCommit} informado. As mudanças posteriores ao {numCommit} serão excluídas.	
+
+git reset --hard origin/master => Reset master to last commit
 
 **************************************************************************************************************************************************
                     GIT STASH
@@ -128,7 +133,8 @@ git biset revert -> Depois que achar o commit bom, usar git revert, ele manter o
 
 git revert {numCommit} -> Reverte para o commit desejado.
 ***************************************************************************************************************************************************
-                ALIAS
+                
+                
 vim ~/.gitconfig -> Criar um [alias]
 st = status -> exemplo de alias para git status
 
@@ -145,3 +151,23 @@ git cherry-pick {numCommit_1} {numCommit_1} => Aplica multiplos commits
 git cherry-pick {numCommit} -n => Aplica as alterações, mas mantem na unstage area
 
 git cherry-pick {numCommit_begin}..{numCommit_end}
+
+*************************************************************************************
+               MUDA MSG ULTIMO COMMIT
+git commit --amend -m "nova mensagem
+**************************************************************************************
+              PROCURA COMMIT PELA MSG
+git log -g --grep="msg";       
+
+**************************************************************************************
+              ABORTA CONFITOS
+git merge --abort  
+
+
+
+
+
+
+
+
+"               
